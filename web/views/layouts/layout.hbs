@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{pageTitle}}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
-    <style>
-        i{
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>
+            {{pageTitle}}
+        </title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" rel="stylesheet"/>
+        <style>
+            i{
             padding-right: 10px;
         }
         #student-form{
@@ -18,38 +20,32 @@
             margin-bottom: 20px;
 
         }
-    </style>
-    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-  </head>
-  <body>
+        </style>
+        <script src="http://code.jquery.com/jquery-2.2.4.min.js">
+        </script>
+    </head>
+</html>
+<body>
     <section class="hero is-link">
-    <div class="hero-body container">
-        <a href="/">
-        <p class="title">
-        School Information System
-        </p>
-        <p class="subtitle">
-        Manage Student Information
-        </p>
-        </a>
-
-        
-    </div>
+        <div class="hero-body container">
+            <a href="/">
+                <p class="title">
+                    School Information System
+                </p>
+                <p class="subtitle">
+                    Manage Student Information
+                </p>
+            </a>
+        </div>
     </section>
-
     <div class="container is-fluid">
-
         {{#if message}}
         <br>
-
-        <div class="notification is-warning">
-           
-            {{message}}
-        </div>
-        {{/if}}
+            <div class="notification is-warning">
+                {{message}}
+            </div>
+            {{/if}}
         {{{body}}}
+        </br>
     </div>
-
-    
-  </body>
-</html>
+</body>

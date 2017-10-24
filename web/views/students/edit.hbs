@@ -1,148 +1,199 @@
 <section class="columns is-info" style="padding-top: 20px;">
     <div class="column">
-       <h1 class="title">Edit Details: {{student.first_name}} {{student.last_name}}
+        <h1 class="title">
+            Edit Details: {{student.first_name}} {{student.last_name}}
             <div class="is-pulled-right">
-                <a href="/" class="button is-link"><i class="fa fa-list"></i> List Student</a>
-                 <a href="/student/add" class="button is-primary"><i class="fa fa-user-plus"></i> Add Student</a>
-        
+                <a class="button is-link" href="/">
+                    <i class="fa fa-list">
+                    </i>
+                    List Student
+                </a>
+                <a class="button is-primary" href="/student/add">
+                    <i class="fa fa-user-plus">
+                    </i>
+                    Add Student
+                </a>
             </div>
         </h1>
-      
     </div>
 </section>
-<div class="is-clearfix"></div>
-
+<div class="is-clearfix">
+</div>
 <form method="post">
-<section class="columns is-info" style="padding: 10px;">
-    <div class="column is-half">    
-    <table class="table is-fullwidth is-striped">
-        <thead>
-             <th colspan="2"><p class="title has-text-centered"></p></th>
-        </thead>
-        <tr>
-            <th class="has-text-right" width="30%">
-                First Name
-            </th>
-            <td><input class="input" type="text" name="first_name" value="{{student.first_name}}" required> </td>
-        </tr>
-        <tr>
-            <th class="has-text-right" width="30%">
-                Last Name
-            </th>
-            <td><input class="input" type="text" name="last_name" value="{{student.last_name}}" required> </td>
-        </tr>
-        <tr>
-            <th class="has-text-right" width="30%">
-                Gender
-            </th>
-            <td>
-                <select name="gender"  class="control">
-                     {{#if student.gender}}
-                     <option value="{{student.gender}}" selected>{{student.gender}}</option>
-                     {{/if}}
-                     <option value="">Select Gender</option>
-                   <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                </select> 
-                
-            </td>
-        </tr>
-        <tr>
-            <th class="has-text-right" width="30%">
-                Date of Birth
-            </th>
-            <td><input class="input" type="date" name="dob" value="{{student.dob}}"> </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                Email
-            </th>
-            <td><input class="input" type="text" name="email" placeholder="Email" value="{{student.email}}"> </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                phone
-            </th>
-            <td><input class="input" type="text" name="phone" placeholder="Phone" value="{{student.phone}}"> </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                State
-            </th>
-            <td>
-                <select name="state" class="control">
-                     {{#if student.state}}
-                     <option value="{{student.state}}" selected>{{student.state}}</option>
-                     {{/if}}
-                     <option value="">Select State</option>
-                    {{#each states}}
-                    <option value="{{this}}">{{this}}</option>
-                    {{/each}}
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                Marital Status
-            </th>
-            <td>
-                <select name="marital_status"  class="control">
-                     {{#if student.marital_status}}
-                     <option value="{{student.marital_status}}" selected>{{student.marital_status}}</option>
-                     {{/if}}
-                     <option value="">Select Status</option>
-                   <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                </select> 
-            </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                Institution
-            </th>
-            <td>
-                <select name="institution"  class="control">
-                     {{#if student.institution}}
-                     <option value="{{student.institution}}" selected>{{student.institution}}</option>
-                     {{/if}}
-                     <option value="">Select Institution</option>
-                    {{#each institutions}}
-                    <option value="{{this}}">{{this}}</option>
-                    {{/each}}
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th class="has-text-right">
-                Department
-            </th>
-            <td> 
-               
-
-                 <select name="department"  class="control">
-                     {{#if student.department}}
-                     <option value="{{student.department}}" selected>{{student.department}}</option>
-                     {{/if}}
-                     <option value="">Select Department</option>
-                    {{#each departments}}
-                    <option value="{{this}}">{{this}}</option>
-                    {{/each}}
-                </select>
-              
-            </td>
-        </tr>
-    </table>
-  
-                    
-                    <div class="has-text-centered">
-                        <button type="submit" class="button is-primary"><i class="fa fa-save"></i>Save & Update</button>
-                
-                    </div>
-                
-                             
-            
-                
-    </div>
-
-</section>
-    </form>
+    <section class="columns is-info" style="padding: 10px;">
+        <div class="column is-half">
+            <table class="table is-fullwidth is-striped">
+                <thead>
+                    <th colspan="2">
+                        <p class="title has-text-centered">
+                        </p>
+                    </th>
+                </thead>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        First Name
+                    </th>
+                    <td>
+                        <input class="input" name="first_name" required="" type="text" value="{{student.first_name}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Last Name
+                    </th>
+                    <td>
+                        <input class="input" name="last_name" required="" type="text" value="{{student.last_name}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Gender
+                    </th>
+                    <td>
+                        <select class="control" name="gender">
+                            {{#if student.gender}}
+                            <option selected="" value="{{student.gender}}">
+                                {{student.gender}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Gender
+                            </option>
+                            <option value="Male">
+                                Male
+                            </option>
+                            <option value="Female">
+                                Female
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Date of Birth
+                    </th>
+                    <td>
+                        <input class="input" name="dob" type="date" value="{{student.dob}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Email
+                    </th>
+                    <td>
+                        <input class="input" name="email" placeholder="Email" type="text" value="{{student.email}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        phone
+                    </th>
+                    <td>
+                        <input class="input" name="phone" placeholder="Phone" type="text" value="{{student.phone}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        State
+                    </th>
+                    <td>
+                        <select class="control" name="state">
+                            {{#if student.state}}
+                            <option selected="" value="{{student.state}}">
+                                {{student.state}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select State
+                            </option>
+                            {{#each states}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Marital Status
+                    </th>
+                    <td>
+                        <select class="control" name="marital_status">
+                            {{#if student.marital_status}}
+                            <option selected="" value="{{student.marital_status}}">
+                                {{student.marital_status}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Status
+                            </option>
+                            <option value="Single">
+                                Single
+                            </option>
+                            <option value="Married">
+                                Married
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Institution
+                    </th>
+                    <td>
+                        <select class="control" name="institution">
+                            {{#if student.institution}}
+                            <option selected="" value="{{student.institution}}">
+                                {{student.institution}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Institution
+                            </option>
+                            {{#each institutions}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Department
+                    </th>
+                    <td>
+                        <select class="control" name="department">
+                            {{#if student.department}}
+                            <option selected="" value="{{student.department}}">
+                                {{student.department}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Department
+                            </option>
+                            {{#each departments}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="has-text-centered">
+                <button class="button is-primary" type="submit">
+                    <i class="fa fa-save">
+                    </i>
+                    Save & Update
+                </button>
+            </div>
+        </div>
+    </section>
+</form>
