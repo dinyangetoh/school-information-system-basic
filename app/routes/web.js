@@ -3,22 +3,25 @@ var router = require('express').Router();
 // Import node request module
 var request = require('request');
 
+
+// Append the rootUrl variable in requests
 router.use(function(req, res, next) {
     baseUrl = req.protocol + "://" + req.get('host') + req.originalUrl;
     rootUrl = req.protocol + "://" + req.get('host');
     return next();
 });
 
+// Redirect default route to Lists
 router.get('/', function(req, res) {
     res.redirect('/list');
 });
+
+// List students
 router.get('/list', function(req, res) {
+    // Call student list API with request module
     request(rootUrl + '/api/students', function(error, response, body) {
         var data = JSON.parse(body);
         res.render('index', {
-            pageTitle: "School Information System - Basic",
-            title: "Home",
-            subtitle: "Manage Student information",
             message: req.query.msg,
             students: data.data
         });
@@ -29,9 +32,6 @@ router.get('/student/view/:id', function(req, res) {
     request.get(rootUrl + '/api/students/' + req.params.id, function(error, response, body) {
         var data = JSON.parse(body);
         res.render('students/view', {
-            pageTitle: "School Information System - Basic",
-            title: "View Student",
-            subtitle: "",
             student: data.data
         });
     });
