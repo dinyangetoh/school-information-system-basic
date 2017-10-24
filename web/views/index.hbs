@@ -1,0 +1,54 @@
+
+
+<section class="columns is-info" style="padding: 20px 0;">
+    <div class="column">
+        <h1 class="title">List of Students
+            <div class="is-pulled-right">
+                <a href="/student/add" class="button is-primary"><i class="fa fa-user-plus"></i> Add Student</a>
+            </div>
+        </h1>
+        <p class="subtitle">We have a total of <b><span class="tag is-black">{{students.length}}</span></b> students </p>
+    </div>
+</section>
+<div class="is-clearfix"></div>
+
+<div class="columns">
+    
+     {{#each students}}
+      
+    {{#ifThird @index}}
+    </div>
+      <div class="columns">        
+    {{/ifThird}}
+     <div class="column is-primary">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title has-text-info">
+               {{first_name}} {{last_name}}
+                </p>
+                <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+                </a>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                   
+                <p>is from {{state}} and is studying <b>{{department}}</b> at the <b>{{institution}}</b></p>
+                </div>
+            </div>
+            <footer class="card-footer"> 
+               <a href="/student/view/{{_id}}" class="card-footer-item is-link"><i class="fa fa-eye"></i>View</a>  
+            </footer>
+            </div>
+        
+    </div>
+    
+   
+
+     {{/each}}
+</div>
+
+
+   

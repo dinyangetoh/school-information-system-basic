@@ -8,9 +8,13 @@
         "start": "node app.js"
     },
     "dependencies": {
-        "express": "*",
         "body-parser": "*",
-        "mongoose": "*"
+        "express": "*",
+        "express-handlebars": "^3.0.0",
+        "mongoose": "*",
+        "querystring": "^0.2.0",
+        "request": "^2.83.0",
+        "url": "^0.11.0"
     },
     "keywords": [
         "sis",

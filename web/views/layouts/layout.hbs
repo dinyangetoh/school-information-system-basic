@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+    <style>
+        i{
+            padding-right: 10px;
+        }
+        #student-form{
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f2f7ff;
+            margin-bottom: 20px;
+
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+    {{!-- <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+        <div class="container">
+            <div class="navbar-brand" href="/">
+                <h3 class="navbar-item">{{pageTitle}}</h3>
+            </div>
+
+            <div class="is-right">
+                <a class="navbar-item"> <i class="fa fa-home"></i> Home</a>
+            </div>
+        </div>
+    </nav> --}}
+
+    <section class="hero is-link">
+    <div class="hero-body container">
+        <p class="title">
+        School Information System
+        </p>
+        <p class="subtitle">
+        Manage Student Information
+        </p>
+
+        
+    </div>
+    </section>
+
+    <div class="container is-fluid">
+
+        {{#if message}}
+        <br>
+
+        <div class="notification is-warning">
+           
+            {{message}}
+        </div>
+        {{/if}}
+        {{{body}}}
+    </div>
+
+    
+  </body>
+</html>

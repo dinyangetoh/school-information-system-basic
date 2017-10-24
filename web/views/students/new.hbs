@@ -1,0 +1,148 @@
+
+<section class="columns is-info" style="padding: 20px 0;">
+    <div class="column">
+        {{!-- <h1 class="title">Add Students --}}
+            <div class="is-pulled-right">
+                <a href="/" class="button is-link"><i class="fa fa-list"></i> List Student</a>
+            </div>
+        {{!-- </h1> --}}
+    </div>
+</section>
+<div class="is-clearfix"></div>
+
+<section id="form">
+    <div class="columns">
+        <div id="student-form" class="column is-half is-offset-one-quarter">
+            <p class="title has-text-centered">Add Students</p>
+            <hr>
+            <p class="has-text-centered">Kindly provide information for the input boxes below</p>
+           
+            <br>
+            <br>
+            
+            <form action="/student/add" method="post">
+            <div class="columns">
+                
+                <div class="column">
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="first_name" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="last_name" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="text" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone</label>
+                        <div class="control">
+                            <input class="input" type="text" name="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="label">Date of Birth</label>
+                        <div class="control">
+                            <input class="input" type="date" name="dob" placeholder="DD/MM/YYYY">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Gender</label>
+                        <div class="control">
+                            <div class="select">
+                            <select name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Marital Status</label>
+                        <div class="control">
+                            <div class="select">
+                            <select name="marital_status">
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">State</label>
+                        <div class="control">
+                            <div class="select">
+                            <select name="state">
+                                {{#each states}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Institution</label>
+                        <div class="control">
+                            <div class="select">
+                            <select name="institution">
+                                {{#each institutions}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Department</label>
+                        <div class="control">
+                            <div class="select">
+                            <select name="department">
+                                {{#each departments}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{!-- <div class="field">
+                        <label class="label">City</label>
+                        <div class="control">
+                            <input class="input" type="text" name="city" placeholder="City">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Contact Address</label>
+                        <div class="control">
+                            <input class="input" type="text" name="contact" placeholder="Contact Address">
+                        </div>
+                    </div> --}}
+                </div>
+             </div>
+            <div class="columns">
+                <div class="column">
+                    
+                    <div class="has-text-right">
+                        <button type="submit" class="button is-info is-large"><i class="fa fa-save"></i>Save</button>
+                
+                    </div>
+                </div>
+            </div>                   
+            </form>
+            
+        </div>
+    </div>
+</section>
