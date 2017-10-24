@@ -23,8 +23,8 @@ app.set('view options', { layout: 'layout' });
 
 mongoose.Promise = global.Promise;
 // Connect to Mongoose
-//mongoose.connect('mongodb://heroku_dbadmin:nwl6b0kq@ds227525.mlab.com:27525/heroku_nwl6b0kq', { useMongoClient: true });
-mongoose.connect('mongodb://localhost/sis', { useMongoClient: true });
+mongoose.connect('mongodb://heroku_dbadmin:nwl6b0kq@ds227525.mlab.com:27525/heroku_nwl6b0kq', { useMongoClient: true });
+//mongoose.connect('mongodb://localhost/sis', { useMongoClient: true });
 
 var db = mongoose.connection;
 
