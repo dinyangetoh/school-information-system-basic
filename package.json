@@ -8,12 +8,12 @@
         "start": "node app.js"
     },
     "dependencies": {
-        "body-parser": "*",
-        "express": "*",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
         "express-handlebars": "^3.0.0",
-        "mongoose": "*",
+        "mongoose": "^5.4.7",
         "querystring": "^0.2.0",
-        "request": "^2.83.0",
+        "request": "^2.88.0",
         "url": "^0.11.0"
     },
     "keywords": [
