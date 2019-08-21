@@ -37,9 +37,7 @@ app.set('view options', {
 
 mongoose.Promise = global.Promise;
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/sis', {
-    useMongoClient: true
-});
+mongoose.connect('mongodb://localhost/sis',{ useNewUrlParser: true } );
 // mongoose.connect('mongodb://heroku_dbadmin:nwl6b0kq@ds227525.mlab.com:27525/heroku_nwl6b0kq', { useMongoClient: true });
 var db = mongoose.connection;
 
